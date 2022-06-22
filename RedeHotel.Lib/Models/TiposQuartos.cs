@@ -1,6 +1,8 @@
+using RedeHotel.Lib.Exceptions;
+
 namespace RedeHotel.Lib.Models
 {
-    public class TiposQuartos
+    public class TiposQuartos : ModelBase
     {
         public int Id{get; set;}
         public string Nome{get; set;}
@@ -13,6 +15,7 @@ namespace RedeHotel.Lib.Models
         public DateTime DataUltimaAtualizacao{get; set;}
 
         public TiposQuartos (int id, string nome, string descricao, int ocupacaoMaxima, int camaCasal, int camaSolteiro, float valor, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
+        : base (id, dataCadastro, dataUltimaAtualizacao)
         {
             Id = id;
             Nome = nome;
@@ -23,11 +26,6 @@ namespace RedeHotel.Lib.Models
             Valor = valor;
             DataCadastro = dataCadastro;
             DataUltimaAtualizacao = dataUltimaAtualizacao;
-        }
-
-        public TiposQuartos()
-        {
-
         }
 
         public int GetId()
@@ -118,6 +116,16 @@ namespace RedeHotel.Lib.Models
         public void SetDataUltimaAtualizacao(DateTime dataUltimaAtualizacao)
         {
             DataUltimaAtualizacao = dataUltimaAtualizacao;
+        }
+
+        public void ValidarOcupacaoMaxima(int ocupacaoMaxima)
+        {
+            var capacidadeMax = ((CamaCasal * 2) + (CamaSolteiro * 1));
+            if (ocupacaoMaxima == capacidadeMax)
+            {
+                return;
+            }
+            throw new ExceptionValidacoes("Ocupação máxima não pode ser maior do que a quantidade de pessoas suportadas pelas camas!");
         }
     }
 }

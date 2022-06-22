@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.Lib\\RedeHotel.Lib.csproj": {}
+    "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.TesteUnitario\\RedeHotel\\RedeHotel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.Lib\\RedeHotel.Lib.csproj": {
+    "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.TesteUnitario\\RedeHotel\\RedeHotel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.Lib\\RedeHotel.Lib.csproj",
-        "projectName": "RedeHotel.Lib",
-        "projectPath": "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.Lib\\RedeHotel.Lib.csproj",
+        "projectUniqueName": "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.TesteUnitario\\RedeHotel\\RedeHotel.csproj",
+        "projectName": "RedeHotel",
+        "projectPath": "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.TesteUnitario\\RedeHotel\\RedeHotel.csproj",
         "packagesPath": "C:\\Users\\YXTR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.Lib\\obj\\",
+        "outputPath": "C:\\Users\\YXTR\\Desktop\\projetosOOP\\RedeHotel\\RedeHotel.TesteUnitario\\RedeHotel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\YXTR\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,9 +38,25 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[16.11.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
             }
           },
           "imports": [

@@ -1,6 +1,8 @@
+using RedeHotel.Lib.Exceptions;
+
 namespace RedeHotel.Lib.Models
 {
-    public class Hotel
+    public class Hotel : ModelBase
     {
         public int Id{get; set;}
         public string Nome{get; set;}
@@ -15,6 +17,7 @@ namespace RedeHotel.Lib.Models
         public DateTime DataUltimaAtualizacao{get; set;}
 
         public Hotel (int id, string nome, string endereco, string cep, string descricao, string telefone, string email, DateTime horarioCheckIn, DateTime horarioCheckOut, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
+        : base (id, dataCadastro, dataUltimaAtualizacao)
         {
             Id = id;
             Nome = nome;
@@ -29,10 +32,7 @@ namespace RedeHotel.Lib.Models
             DataUltimaAtualizacao = dataUltimaAtualizacao;
         }
 
-        public Hotel()
-        {
-            
-        }
+        
 
         public int GetId()
         {
@@ -143,5 +143,22 @@ namespace RedeHotel.Lib.Models
         {
             DataUltimaAtualizacao = dataUltimaAtualizacao;
         }
+
+        public void ValidarTelefone(string telefone)
+    {
+        if (telefone.Length == 14)
+        {
+            return;
+        }
+        throw new ExceptionValidacoes("Número de telefone deve ter 14 caracteres!");
+    }
+    public void ValidarEmail(string email)
+    {
+        if (email.Contains("@"))
+        {
+            return;
+        }
+        throw new ExceptionValidacoes("Email deve conter @!");
+    }
     }
 }

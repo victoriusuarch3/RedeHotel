@@ -1,6 +1,8 @@
+using RedeHotel.Lib.Exceptions;
+
 namespace RedeHotel.Lib.Models
 {
-    public class Estadia
+    public class Estadia : ModelBase
     {
        public int Id {get; set;}
        public int IdResposavel{get; set;}
@@ -10,7 +12,8 @@ namespace RedeHotel.Lib.Models
        public DateTime DataCadastro {get; set;}
        public DateTime DataUltimaAtualizacao{get; set;}
 
-       public Estadia (int id, int idResposavel, int idQuarto, DateTime dataEntrada, DateTime dataSaida, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
+       public Estadia(int id, int idResposavel, int idQuarto, DateTime dataEntrada, DateTime dataSaida, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
+       : base (id, dataCadastro, dataUltimaAtualizacao)
        {
         Id = id;
         IdResposavel = idResposavel;
@@ -19,10 +22,6 @@ namespace RedeHotel.Lib.Models
         DataSaida = dataSaida;
         DataCadastro = dataCadastro;
         DataUltimaAtualizacao = dataUltimaAtualizacao;
-       }
-       public Estadia()
-       {
-
        }
 
        public int GetId()
@@ -72,6 +71,7 @@ namespace RedeHotel.Lib.Models
 
        public void SetDataSaida(DateTime dataSaida)
        {
+        validacaoDataSaida(dataSaida);
         DataSaida = dataSaida;
        }
 
@@ -93,6 +93,15 @@ namespace RedeHotel.Lib.Models
        public void SetDataUltimaAtualizacao(DateTime dataUltimaAtualizacao)
        {
         DataUltimaAtualizacao = dataUltimaAtualizacao;
+       }
+
+       public void validacaoDataSaida(DateTime dataSaida)
+       {
+        if(dataSaida > DataEntrada)
+        {
+            return;
+        }
+        throw new RedeHotelException("A data última atualização não pode ser menor que a data cadastro");
        }
     }
 }

@@ -1,6 +1,6 @@
 namespace RedeHotel.Lib.Models
 {
-    public class Quartos
+    public class Quartos : ModelBase
     {
         public int Id{get; set;}
         public int IdHotel{get; set;}
@@ -11,6 +11,7 @@ namespace RedeHotel.Lib.Models
         public DateTime DataUltimaAtualizacao{get; set;}
 
         public Quartos (int id, int idHotel, int idTipoQuarto, int numero, int andar, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
+        : base (id, dataCadastro, dataUltimaAtualizacao)
         {
             Id = id;
             IdHotel = idHotel;
@@ -19,11 +20,6 @@ namespace RedeHotel.Lib.Models
             Andar = andar;
             DataCadastro = dataCadastro;
             DataUltimaAtualizacao = dataUltimaAtualizacao;
-        }
-
-        public Quartos()
-        {
-
         }
 
         public int GetId()

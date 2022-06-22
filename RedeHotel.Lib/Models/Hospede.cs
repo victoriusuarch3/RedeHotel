@@ -1,6 +1,7 @@
+using RedeHotel.Lib.Exceptions;
 namespace RedeHotel.Lib.Models
 {
-    public class Hospede
+    public class Hospede : ModelBase
     {
         public int Id{get; set;}
         public string Nome{get; set;}
@@ -12,6 +13,7 @@ namespace RedeHotel.Lib.Models
         public DateTime DataUltimaAtualizacao{get; set;}
 
         public Hospede (int id, string nome, string telefone, string cpf, string email, DateTime dataNascimento, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
+        : base (id, dataCadastro, dataUltimaAtualizacao)
         {
             Id = id;
             Nome = nome;
@@ -22,10 +24,7 @@ namespace RedeHotel.Lib.Models
             DataCadastro = dataCadastro;
             DataUltimaAtualizacao = dataUltimaAtualizacao;
         }
-        public Hospede()
-        {
-
-        }
+        
 
         public int GetId()
         {
@@ -105,6 +104,31 @@ namespace RedeHotel.Lib.Models
         public void SetDataUltimaAtualizacao(DateTime dataUltimaAtualizacao)
         {
             DataUltimaAtualizacao = dataUltimaAtualizacao;
+        }
+
+         public void ValidacaoTelefone(string telefone)
+        {
+            if (telefone.Length == 14)
+            {
+                return;
+            }
+            throw new ExceptionValidacoes("Número de telefone deve ter 14 caracteres!");
+        }
+        public void ValidacaoCpf(string cpf)
+        {
+            if (cpf.All(char.IsNumber))
+            {
+                return;
+            }
+            throw new ExceptionValidacoes("CPF deve conter apenas números!");
+        }
+        public void ValidacaoEmail(string email)
+        {
+            if (email.Contains("@"))
+            {
+                return;
+            }
+            throw new ExceptionValidacoes("Email deve conter @!");
         }
     }
 }

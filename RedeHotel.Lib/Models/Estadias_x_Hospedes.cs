@@ -1,6 +1,6 @@
 namespace RedeHotel.Lib.Models
 {
-    public class Estadias_x_Hospedes
+    public class Estadias_x_Hospedes : ModelBase
     {
         public int Id{get; set;}
         public int IdEstadia{get; set;}
@@ -9,17 +9,13 @@ namespace RedeHotel.Lib.Models
         public DateTime DataUltimaAtualizacao{get; set;}
 
         public Estadias_x_Hospedes (int id, int idEstadia, int idHospede, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
+        : base (id, dataCadastro, dataUltimaAtualizacao)
         {
             Id = id;
             IdEstadia = idEstadia;
             IdHospede = idHospede;
             DataCadastro = dataCadastro;
             DataUltimaAtualizacao = dataUltimaAtualizacao;
-        }
-
-        public Estadias_x_Hospedes()
-        {
-
         }
 
         public int GetId()
