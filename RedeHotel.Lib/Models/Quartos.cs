@@ -9,6 +9,8 @@ namespace RedeHotel.Lib.Models
         public int Andar{get; set;}
         public DateTime DataCadastro{get; set;}
         public DateTime DataUltimaAtualizacao{get; set;}
+        public virtual List<Estadia> Estadias {get; set;}
+        public virtual Hotel Hotel{get; set;}
 
         public Quartos (int id, int idHotel, int idTipoQuarto, int numero, int andar, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
         : base (id, dataCadastro, dataUltimaAtualizacao)

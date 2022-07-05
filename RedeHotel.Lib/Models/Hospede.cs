@@ -11,6 +11,8 @@ namespace RedeHotel.Lib.Models
         public DateTime DataNascimento{get; set;}
         public DateTime DataCadastro{get; set;}
         public DateTime DataUltimaAtualizacao{get; set;}
+        public  virtual List<EstadiasxHospedes> Estadias_x_Hospedes{get; set;}
+        public virtual List<Estadia> Estadias {get; set;}
 
         public Hospede (int id, string nome, string telefone, string cpf, string email, DateTime dataNascimento, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
         : base (id, dataCadastro, dataUltimaAtualizacao)

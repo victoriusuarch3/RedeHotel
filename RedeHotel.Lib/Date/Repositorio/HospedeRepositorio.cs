@@ -1,14 +1,13 @@
-using DoDevHotel.Lib.Context;
-using DoDevHotel.Lib.Exceptions;
-using DoDevHotel.Lib.Interfaces;
-using DoDevHotel.Lib.Models;
-using Microsoft.EntityFrameworkCore;
+using RedeHotel.Lib.Date;
+using RedeHotel.Lib.Date.Repository;
+using RedeHotel.Lib.Interfaces;
+using RedeHotel.Lib.Models;
 
 namespace DoDevHotel.Lib.Date.Repository
 {
     public class HospedeRepositorio : BaseRepositorio<Hospede>, IHospedeRepositorio
-    {
-        public HospedeRepositorio(DoDevHotelContext context) : base(context, context.Hospedes)
+{
+        public HospedeRepositorio(RedeHotelContext context) : base(context, context.Hospedes)
         {
 
         }

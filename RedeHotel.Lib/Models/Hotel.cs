@@ -15,6 +15,7 @@ namespace RedeHotel.Lib.Models
         public DateTime HorarioCheckOut{get; set;}
         public DateTime DataCadastro{get; set;}
         public DateTime DataUltimaAtualizacao{get; set;}
+        public virtual List<Quartos> Quartos{get; set;}
 
         public Hotel (int id, string nome, string endereco, string cep, string descricao, string telefone, string email, DateTime horarioCheckIn, DateTime horarioCheckOut, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
         : base (id, dataCadastro, dataUltimaAtualizacao)

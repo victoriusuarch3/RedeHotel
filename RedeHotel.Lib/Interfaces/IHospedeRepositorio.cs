@@ -1,6 +1,6 @@
 namespace RedeHotel.Lib.Interfaces
 {
-    public class IHospedeRepositorio
+    public interface IHospedeRepositorio
     {
         
     }

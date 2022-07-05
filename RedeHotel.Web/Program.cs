@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using RedeHotel.Lib.Data;
+using RedeHotel.Lib.Date;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<RedeHotelContext>(
 conn =>
-conn.UseNpgsql(builder.Configuration.GetConnectionString("RedeHotel").UseCamelCaseNamingConvention()));
+conn.UseNpgsql(builder.Configuration.GetConnectionString("RedeHotel")).UseCamelCaseNamingConvention());
 
 var app = builder.Build();
 

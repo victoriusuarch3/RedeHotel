@@ -11,6 +11,9 @@ namespace RedeHotel.Lib.Models
        public DateTime DataSaida {get; set;}
        public DateTime DataCadastro {get; set;}
        public DateTime DataUltimaAtualizacao{get; set;}
+       public virtual Hospede Responsavel {get; set;}
+       public virtual Quartos Quartos {get; set;}
+       public virtual List<EstadiasxHospedes> Estadias_x_Hospedes{get; set;}
 
        public Estadia(int id, int idResposavel, int idQuarto, DateTime dataEntrada, DateTime dataSaida, DateTime dataCadastro, DateTime dataUltimaAtualizacao)
        : base (id, dataCadastro, dataUltimaAtualizacao)
@@ -101,7 +104,7 @@ namespace RedeHotel.Lib.Models
         {
             return;
         }
-        throw new RedeHotelException("A data última atualização não pode ser menor que a data cadastro");
+        throw new ExceptionValidacoes("A data última atualização não pode ser menor que a data cadastro");
        }
     }
 }

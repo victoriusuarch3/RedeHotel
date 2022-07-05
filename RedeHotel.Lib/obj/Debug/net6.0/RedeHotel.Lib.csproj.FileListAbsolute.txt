@@ -1,0 +1,12 @@
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\RedeHotel.Lib.csproj.AssemblyReference.cache
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\RedeHotel.Lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\RedeHotel.Lib.AssemblyInfoInputs.cache
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\RedeHotel.Lib.AssemblyInfo.cs
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\RedeHotel.Lib.csproj.CoreCompileInputs.cache
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\bin\Debug\net6.0\RedeHotel.Lib.deps.json
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\bin\Debug\net6.0\RedeHotel.Lib.dll
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\bin\Debug\net6.0\RedeHotel.Lib.pdb
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\RedeHotel.Lib.dll
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\refint\RedeHotel.Lib.dll
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\RedeHotel.Lib.pdb
+C:\Users\YXTR\Desktop\projetosOOP\RedeHotel\RedeHotel.Lib\obj\Debug\net6.0\ref\RedeHotel.Lib.dll
